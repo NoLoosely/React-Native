@@ -6,15 +6,16 @@ import {
      TextInput,
      TouchableOpacity,
      Image,
+    KeyboardAvoidingView,
 
 
     } from 'react-native';
  
 
-export default class LoginForm extends Component {
+export default class test extends Component {
   render() {
     return (
-      
+      <KeyboardAvoidingView style={{flex: 1, backgroundColor: "red"}} behavior="padding">
       <View style={styles.container}>
 
       <View style={styles.inputView}>
@@ -26,13 +27,10 @@ export default class LoginForm extends Component {
         <Image style={styles.icon} source={{uri: "https://images.vexels.com/media/users/3/136535/isolated/preview/393a7d8e436bccc3aedfd43865b48890-icono-de-un-candado-by-vexels.png"}}/>
         <TextInput style={styles.input} underlineColorAndroid="black" placeholder="Enter your password" placeholderTextColor="white" secureTextEntry returnKeyType="done" ref={(input)=> this.passwordInput = input}/>
         </View>
-       {/*
-        <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.buttonText} onPress={()=> navigate("NextPage")}>Prijavi se</Text>
-        </TouchableOpacity>
-       */ }
+ 
  
       </View>
+      </KeyboardAvoidingView>
     );
   }
 }
@@ -40,6 +38,8 @@ export default class LoginForm extends Component {
 const styles = StyleSheet.create({
     container:{
         padding: 20,
+        flex: 1,
+        justifyContent: "flex-end"
     },
     input:{
         flex: 1,

@@ -6,6 +6,8 @@ import { StyleSheet,
   TextInput,
   TouchableOpacity,
   ImageBackground,
+  KeyboardAvoidingView,
+s
 
 } from 'react-native';
 
@@ -18,6 +20,7 @@ import FourthPage from "./Views/ListPage";
 import LoginPage from "./Views/LoginPage";
 
 import { BackHandler } from 'react-native';//back button
+import Test from "./Views/test";
 
 class LoginScreen extends React.Component{
   static navigationOptions = {
@@ -26,17 +29,21 @@ class LoginScreen extends React.Component{
   render(){
     const{navigate} = this.props.navigation;
     return (
+      
       <ImageBackground style={styles.loginBackground} source={{uri: "http://www.vactualpapers.com/web/images/April%2003%202016%20Mobile/Blurred%20Background%20HD%20Mobile%20Wallpaper15.png"}}>
       <View style={styles.loginContainer}>
+      <KeyboardAvoidingView  style={{flex: 1}} behavior="padding">
         <LoginPage/>
-
+        </KeyboardAvoidingView>
          <View >
+         
         <TouchableOpacity style={styles.buttonCon}>
             <Text style={styles.buttonText} onPress={()=> navigate("Home")}>Sign In</Text>
         </TouchableOpacity>
 
         </View>
       </View>
+
       </ImageBackground>
 
     );
@@ -54,13 +61,13 @@ class HomeScreen extends React.Component{
   render(){
     const{navigate} = this.props.navigation;
     return(
+      <KeyboardAvoidingView  style={{flex: 1}} behavior="padding">
+
       <View style={styles.container}>
        <Text style={styles.title}>Welcome</Text>
        <Text style={styles.formTitle}>Form:</Text>
 
-  
         <View style={styles.formBody}>
-
           <Text style={styles.formText}>Name:</Text>
           <TextInput style={styles.input} underlineColorAndroid="black" placeholder="type your name" placeholderTextColor="white" returnKeyType="next" onSubmitEditing={() => this.lastName.focus()}/>
           <Text style={styles.formText}>Last name:</Text>
@@ -71,7 +78,6 @@ class HomeScreen extends React.Component{
           <TextInput style={styles.input} underlineColorAndroid="black" placeholder="type your residence" placeholderTextColor="white" returnKeyType="done"  ref={(input)=> this.residence = input} />
         </View>
   
-
         <View style={styles.con} >
         <TouchableOpacity style={styles.buttonCon}>
             <Text style={styles.buttonText} onPress={()=> navigate("SecondPage")}>Second Page</Text>
@@ -81,6 +87,7 @@ class HomeScreen extends React.Component{
       
          
       </View>
+      </KeyboardAvoidingView>
     );
   }
 }
@@ -189,6 +196,7 @@ export default class App extends React.Component {
     //return <LoginPage/>;
      
     return <NavigationApp/>;
+    //return<Test/>;
   }
 }
 

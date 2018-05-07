@@ -84,7 +84,7 @@ export default class List extends Component {
       <View style={styles.container}>
         <FlatList data = {this.state.dataSource}
                   renderItem = {this.renderItem}
-                  keyExtractor={(item, index) => index}
+                  keyExtractor={(item, index) => index.toString()}
                   ItemSeparatorComponent = {this.Separator}
                   />
       </View>
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
         width: 120,
         height: 80,
         margin: 5,
+        backgroundColor: "#74b9ff",
     },
 
     mainView:{

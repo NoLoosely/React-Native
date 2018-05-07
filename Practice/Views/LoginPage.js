@@ -7,6 +7,7 @@ import {
    Button, 
    ImageBackground,
 
+
   } from 'react-native';
 
 import LoginForm from "./LoginForm";
@@ -15,18 +16,18 @@ export default class LoginPage extends Component {
   render() {
     return (
       <ImageBackground style={styles.container} source={{uri: "http://www.vactualpapers.com/web/images/April%2003%202016%20Mobile/Blurred%20Background%20HD%20Mobile%20Wallpaper15.png"}}>
+          
         <View style={styles.logo}>
           <Image
           style={styles.image}
           source={{uri: "https://filestore.hasura.io/v1/file/7723c234-4263-4599-9568-9d6788138c5b"}}
           />
-
         </View>
 
         <View style={styles.form}>
           <LoginForm/>
         </View>
- 
+        
       </ImageBackground>
     );
   }
