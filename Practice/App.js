@@ -7,7 +7,8 @@ import { StyleSheet,
   TouchableOpacity,
   ImageBackground,
   KeyboardAvoidingView,
-s
+  Image,
+
 
 } from 'react-native';
 
@@ -21,6 +22,11 @@ import LoginPage from "./Views/LoginPage";
 
 import { BackHandler } from 'react-native';//back button
 import Test from "./Views/test";
+
+//header buttons
+//import HeaderButtons from 'react-navigation-header-buttons';
+//import {Icon} from "react-native-elements";
+import {FontAwesome} from "react-native-vector-icons";
 
 class LoginScreen extends React.Component{
   static navigationOptions = {
@@ -54,8 +60,22 @@ class LoginScreen extends React.Component{
 
 class HomeScreen extends React.Component{
   static navigationOptions = {
+
     title: "Home",
-    headerLeft: null,
+    headerLeft: null, /*ispod je kod za dodavanje ikone iz repozitorija fontAwesome-a mogu se koristiti i drugi, postavljen unutar elementa Text kako bi se mogao koristiti padding i sve što dopušta Text element*/ 
+    headerRight: ( <Text style={{marginRight: 20}} onPress={ () => { return BackHandler.exitApp(); } } ><FontAwesome name={'power-off'} color="#808080" size={22}/> </Text>),
+   /* headerRight:(
+      <HeaderButtons >
+        <HeaderButtons.Item title="Exit"
+        buttonWrapperStyle={{marginTop: 10}}
+        onPress= { () =>{return BackHandler.exitApp();} }
+
+        />
+                
+      </HeaderButtons>
+  
+    ),
+  */
   };
 
   render(){
@@ -69,13 +89,13 @@ class HomeScreen extends React.Component{
 
         <View style={styles.formBody}>
           <Text style={styles.formText}>Name:</Text>
-          <TextInput style={styles.input} underlineColorAndroid="black" placeholder="type your name" placeholderTextColor="white" returnKeyType="next" onSubmitEditing={() => this.lastName.focus()}/>
+          <TextInput selectionColor="black" style={styles.input} underlineColorAndroid="black" placeholder="type your name" placeholderTextColor="white" returnKeyType="next" onSubmitEditing={() => this.lastName.focus()}/>
           <Text style={styles.formText}>Last name:</Text>
-          <TextInput style={styles.input} underlineColorAndroid="black" placeholder="type your last name" placeholderTextColor="white" returnKeyType="next"  ref={(input)=> this.lastName = input} onSubmitEditing={() => this.email.focus()}/>
+          <TextInput selectionColor="black" style={styles.input} underlineColorAndroid="black" placeholder="type your last name" placeholderTextColor="white" returnKeyType="next"  ref={(input)=> this.lastName = input} onSubmitEditing={() => this.email.focus()}/>
           <Text style={styles.formText}>Email:</Text>
-          <TextInput style={styles.input} underlineColorAndroid="black" placeholder="type your email" placeholderTextColor="white" returnKeyType="next"  ref={(input)=> this.email = input} onSubmitEditing={() => this.residence.focus()}/>
+          <TextInput selectionColor="black" style={styles.input} underlineColorAndroid="black" placeholder="type your email" placeholderTextColor="white" returnKeyType="next"  ref={(input)=> this.email = input} onSubmitEditing={() => this.residence.focus()}/>
           <Text style={styles.formText}>Residence:</Text>
-          <TextInput style={styles.input} underlineColorAndroid="black" placeholder="type your residence" placeholderTextColor="white" returnKeyType="done"  ref={(input)=> this.residence = input} />
+          <TextInput selectionColor="black" style={styles.input} underlineColorAndroid="black" placeholder="type your residence" placeholderTextColor="white" returnKeyType="done"  ref={(input)=> this.residence = input} />
         </View>
   
         <View style={styles.con} >
@@ -168,7 +188,7 @@ const NavigationApp = StackNavigator(
   
   {
     navigationOptions:{
-      headerTintColor: "gray",
+      headerTintColor: "grey",
       headearStyle: {
         marginTop: Expo.Constants.statusBarHeight,
        borderBottomColor: "red",

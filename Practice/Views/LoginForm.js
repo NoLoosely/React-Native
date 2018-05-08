@@ -19,12 +19,12 @@ export default class LoginForm extends Component {
 
       <View style={styles.inputView}>
         <Image style={styles.icon} source={{uri: "https://cdn0.iconfinder.com/data/icons/mini-icon-2-2/16/login_in-512.png"}}/>
-        <TextInput style={styles.input} underlineColorAndroid="black" placeholder="Enter your username" placeholderTextColor="white"  returnKeyType="next" onSubmitEditing={() => this.passwordInput.focus()}/>
+        <TextInput selectionColor="black" style={styles.input} underlineColorAndroid="black" placeholder="Enter your username" placeholderTextColor="white"  returnKeyType="next" onSubmitEditing={() => this.passwordInput.focus()}/>
        </View>
         
        <View style={styles.inputView}>
         <Image style={styles.icon} source={{uri: "https://images.vexels.com/media/users/3/136535/isolated/preview/393a7d8e436bccc3aedfd43865b48890-icono-de-un-candado-by-vexels.png"}}/>
-        <TextInput style={styles.input} underlineColorAndroid="black" placeholder="Enter your password" placeholderTextColor="white" secureTextEntry returnKeyType="done" ref={(input)=> this.passwordInput = input}/>
+        <TextInput selectionColor="black" style={styles.input} underlineColorAndroid="black" placeholder="Enter your password" placeholderTextColor="white" secureTextEntry returnKeyType="done" ref={(input)=> this.passwordInput = input}/>
         </View>
        {/*
         <TouchableOpacity style={styles.buttonContainer}>
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         borderRadius: 10,
 
+      
     },
     buttonContainer:{
         backgroundColor: "#2980b9",
