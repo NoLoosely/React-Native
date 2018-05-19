@@ -10,10 +10,9 @@ import {
   
   } from 'react-native';
 
-  import Actions from "react-native-router-flux";
+  import {Actions} from "react-native-router-flux";
 
 export default class Smjestaj extends Component {
-//const Smjestaj = () => {
   render() {
     return (
 
@@ -34,13 +33,15 @@ export default class Smjestaj extends Component {
         <View style={{flex: 0.9, width:"100%"}}>
 
       <View style={{paddingTop:"2%", paddingBottom:"2%", borderBottomColor:"#A3A3A3", borderBottomWidth:1,  borderTopColor:"#A3A3A3", borderTopWidth:1}}>
-        <View style={{borderLeftWidth:4, borderLeftColor:"#87DC8F"}}>
-          <Text style={styles.listText}>Dom: <Text style={{fontWeight:"bold"}}>Dr. Ante Starčević</Text></Text>
-          <Text style={styles.listText}>Od/Do: <Text style={{fontWeight:"bold"}}>22.09.2018. - 15.07.2019.</Text></Text>
-          <Text style={styles.listText}>Paviljon/soba: <Text style={{fontWeight:"bold"}}>5 / 313</Text></Text>
-          <Text style={styles.listText}>Kategorija sobe: <Text style={{fontWeight:"bold"}}>II kategorija (CN)</Text></Text>
-          <Text style={styles.listText}>Vrsta dokumenta: <Text style={{fontWeight:"bold"}}>Useljenje</Text></Text>
-        </View>
+        <TouchableOpacity onPress={() => Actions.stanarina()}>
+            <View style={{borderLeftWidth:4, borderLeftColor:"#87DC8F"}}>
+            <Text style={styles.listText}>Dom: <Text style={{fontWeight:"bold"}}>Dr. Ante Starčević</Text></Text>
+            <Text style={styles.listText}>Od/Do: <Text style={{fontWeight:"bold"}}>22.09.2018. - 15.07.2019.</Text></Text>
+            <Text style={styles.listText}>Paviljon/soba: <Text style={{fontWeight:"bold"}}>5 / 313</Text></Text>
+            <Text style={styles.listText}>Kategorija sobe: <Text style={{fontWeight:"bold"}}>II kategorija (CN)</Text></Text>
+            <Text style={styles.listText}>Vrsta dokumenta: <Text style={{fontWeight:"bold"}}>Useljenje</Text></Text>
+            </View>
+        </TouchableOpacity>
       </View>
 
         <View style={{paddingTop:"2%", paddingBottom:"2%", borderBottomColor:"#A3A3A3", borderBottomWidth:1}}>
@@ -125,5 +126,3 @@ const styles = StyleSheet.create({
   }
     
 });
-
-//export default Smjestaj;

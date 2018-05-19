@@ -9,16 +9,10 @@ import {
 
 } from 'react-native';
 
-//import { NavigationActions } from 'react-native';
-//import Stanarina from "./Stanarina";
-//import { Actions, navigatorRef } from 'react-native-navigation-actions';
+import {Actions} from "react-native-router-flux";
 
- //this.props.navigation.dispatch(navigateAction)
-import Actions from "react-native-router-flux";
 
 export default class Profil extends Component {
-//const Profil = () => {
-//class Profil extends Component{
  render() {
     return (
 
@@ -74,7 +68,7 @@ export default class Profil extends Component {
 
 
         <View style={{ flex: 0.4, alignItems: "center", justifyContent: "center"/*, backgroundColor: "green"*/ }} >
-          <TouchableOpacity style={{ width: "90%", height: "100%" }}>
+          <TouchableOpacity style={{ width: "90%", height: "100%" }} onPress={() => Actions.profilDetalji()} >
             <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
               <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Opće informacije</Text>
             </View>
@@ -100,7 +94,7 @@ export default class Profil extends Component {
 
         <View style={{ flex: 0.3, alignItems: "center", justifyContent: "center", /*backgroundColor: "red"*/ }} >
           <TouchableOpacity style={{ width: "90%", height: "100%" }} 
-           onPress={() => Actions.smjestaj()}>
+           onPress={() => Actions.stanarina()}>
             
             
             
