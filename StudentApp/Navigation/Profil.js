@@ -81,7 +81,7 @@ export default class Profil extends Component {
         </View>
 
         <View style={{ flex: 0.3, alignItems: "center", justifyContent: "center", /*backgroundColor: "white"*/ }} >
-          <TouchableOpacity style={{ width: "90%", height: "100%" }} >
+          <TouchableOpacity style={{ width: "90%", height: "100%" }} onPress={() => Actions.dom()}>
             <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
               <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Studentski dom Dr. Ante Starčević</Text>
             </View>
@@ -94,11 +94,8 @@ export default class Profil extends Component {
 
         <View style={{ flex: 0.3, alignItems: "center", justifyContent: "center", /*backgroundColor: "red"*/ }} >
           <TouchableOpacity style={{ width: "90%", height: "100%" }} 
-           onPress={() => Actions.stanarina()}>
+           onPress={() => Actions.upisi()}>
             
-            
-            
-         
             <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
               <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>ISSP (Studentska prava)</Text>
             </View>

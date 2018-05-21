@@ -8,6 +8,7 @@ import Upisi from "./Upisi";
 import Stanarina from "./Stanarina";
 import Racuni from "./Racuni";
 import ProfilDetalji from "./ProfilDetails";
+import Dom from "./Dom";
 
 
 import {Actions} from "react-native-router-flux";
@@ -403,6 +404,75 @@ import {Actions} from "react-native-router-flux";
 
 
 
+    class DomScreen extends React.Component{
+        static navigationOptions = { header: null}
+        render(){
+        const {navigate} = this.props.navigation;
+        return(
+            <ImageBackground source={require("../Images/background.png")} style={styles.containerBackground}>
+    
+            <Dom/>
+    
+            <View style={{flex: 0.1, flexDirection: "row"}} >
+                <View style={styles.navigationContainer} >
+                <View  style={styles.navigationImages}>
+                    <TouchableOpacity onPress={() => Actions.upisi()}>
+                    <Image source={require("../Images/upisi.png")}/>
+                    </TouchableOpacity>
+                </View>
+                <Text style={styles.navigationText} onPress={() => Actions.upisi()}>UPISI</Text>
+                </View>
+    
+                <View style={styles.navigationContainer}>
+                <View  style={styles.navigationImages}>
+                    <TouchableOpacity onPress={() => Actions.smjestaj()}>
+                    <Image source={require("../Images/useljenje.png")} />
+                    </TouchableOpacity>
+                </View>
+                <Text style={styles.navigationText}  onPress={() => Actions.smjestaj()}>SMJEŠTAJ</Text>
+                </View>
+    
+                <View style={styles.currentNavigationContainer}>
+                <View style={styles.currentNavigationImages}>
+                    <TouchableOpacity onPress={() => Actions.profil()}>
+                    <Image source={require("../Images/profil.png")} />
+                    </TouchableOpacity>
+                </View>
+                <Text style={styles.navigationText} onPress={() => Actions.profil()}>PROFIL</Text>
+                </View>
+    
+                <View style={styles.navigationContainer} >
+                <View  style={styles.navigationImages}>
+                    <TouchableOpacity onPress={() => Actions.racuni()}>
+                    <Image source={require("../Images/racuni.png")}/>
+                    </TouchableOpacity>
+                </View>
+                <Text style={styles.navigationText} onPress={() => Actions.racuni()}>RAČUNI</Text>
+                </View>
+    
+                <View style={styles.navigationContainer} >
+                <View  style={styles.navigationImages}>
+                    <TouchableOpacity onPress={() => Actions.stanarina()}>
+                    <Image source={require("../Images/stanarina.png")}/>
+                    </TouchableOpacity>
+                </View>
+                <Text style={styles.navigationText} onPress={() => Actions.stanarina()}>STANARINA</Text>
+                </View>
+    
+            </View>
+    
+        </ImageBackground>
+        );
+        };
+    }//kraj Dom
+
+
+
+
+
+
+
+
 const Routes = () => {
     return (
         <Router>
@@ -437,6 +507,11 @@ const Routes = () => {
                 <Scene 
                     key="profilDetalji"
                     component={ProfilDetaljiScreen}
+                />
+
+                <Scene 
+                    key="dom"
+                    component={DomScreen}
                 />
 
             </Scene>

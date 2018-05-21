@@ -13,7 +13,7 @@ import {
 import {Actions} from "react-native-router-flux";
 
 
-export default class ProfilDetails extends Component {
+export default class Dom extends Component {
  render() {
     return (
 
@@ -26,36 +26,48 @@ export default class ProfilDetails extends Component {
           </View>
         </TouchableOpacity>
         <View  style={{width:"100%", height:"100%", alignItems:"center", justifyContent:"flex-end", marginLeft:"-10%"}}>
-          <Text style={styles.headerText}>IVANA HORVAT</Text>
+          <Text style={styles.headerText}>Dr. Ante Starčević</Text>
         </View>
       </View>
 
       <ScrollView style={{flex: 0.9, width:"100%"}}>
-        <View style={{ flex: 0.4, alignItems: "center", justifyContent: "center", paddingBottom: "5%", paddingTop:"10%" /*, backgroundColor: "green"*/ }} >
-          <View style={{ flex: 0.2, justifyContent:"flex-end", width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Opće informacije</Text>
+        <View style={{ flex: 0.4, /*paddingBottom: "5%", paddingTop:"10%" ,*/ backgroundColor: "green", borderBottomWidth: 1, borderBottomColor: "white" }} >
+          <Image style={{width:"100%", height:200, alignSelf:"center"}} source={require("../Images/ProfilPage/Dom/dom.png")}/>
+        </View>
+
+        {/*Kontakt*/}
+        <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", marginTop:"7%", paddingBottom: "5%"/*, backgroundColor: "green"*/ }} >
+          <View style={{ flex: 0.2, justifyContent: "flex-end", width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
+            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Kontakt:</Text>
           </View>
           <View style={{ flex: 0.8, width: "90%", height: "100%", marginTop: "2%" }}>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Vrsta studenta: <Text style={{ fontWeight: "bold" }}>Domaći student</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Mobitel: <Text style={{ fontWeight: "bold" }}>+385 99 2000 238</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Mail: <Text style={{ fontWeight: "bold" }}>ivana.horvat@gmail.com</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>OIB: <Text style={{ fontWeight: "bold" }}>85698844215</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>JMBAG: <Text style={{ fontWeight: "bold" }}>1234512498</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Mat. Br.: <Text style={{ fontWeight: "bold" }}>32014540</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Datum rođenja: <Text style={{ fontWeight: "bold" }}>01.01.1993</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Država/Mjesto rođenja: <Text style={{ fontWeight: "bold" }}>Hrvatska, -</Text></Text>
+           <View style={{flex:1, flexDirection:"row"}}>
+                <View style={{flex:1, width:"70%",  alignItems: "flex-start", }}>
+                    <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Tel. porte: <Text style={{ fontWeight: "bold" }}>01 4590 840</Text></Text>
+                    <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Blagajna: <Text style={{ fontWeight: "bold" }}>01 4590 841</Text></Text>
+                </View>
+                <View style={{flex:0.5, width:"20%", height:"100%", alignItems: "flex-end"}}>
+                    <View style={{height:"100%", width:"70%", alignSelf:"flex-end", justifyContent:"center"}}>
+                        <Image style={{height:"90%", width:"90%", marginTop:"7%"}} source={require("../Images/ProfilPage/Dom/Telefon.png")}/>
+                    </View>
+                </View>
+            </View>
+            <View style={{flex:1,  flexDirection:"row"}}>
+                <View style={{flex:1, width:"70%",  alignItems: "flex-start", }}>
+                    <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Uprava: <Text style={{ fontWeight: "bold" }}>01 4590 842; 01 45890 843</Text></Text>
+                    <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Mail: <Text style={{ fontWeight: "bold" }}>andreja.begic@sczg.hr</Text></Text>
+                </View>
+                <View style={{flex:0.5, width:"20%", height:"100%", alignItems: "flex-end"}}>
+                    <View style={{height:"100%", width:"70%", alignSelf:"flex-end", justifyContent:"center"}}>
+                        <Image style={{height:"90%", width:"90%", marginTop:"7%"}} source={require("../Images/ProfilPage/Dom/Mail.png")}/>
+                    </View>
+                </View>
+            </View>
           </View>
         </View>
 
-        <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", paddingBottom: "5%"/*, backgroundColor: "green"*/ }} >
-          <View style={{ flex: 0.2, justifyContent: "flex-end", width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Boravište</Text>
-          </View>
-          <View style={{ flex: 0.8, width: "90%", height: "100%", marginTop: "2%" }}>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Boravište: <Text style={{ fontWeight: "bold" }}>10 000, Zagreb</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Ulica, broj: <Text style={{ fontWeight: "bold" }}>ul. Luke Modrića, 13c</Text></Text>
-          </View>
-        </View>
+
+        
 
         <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", paddingBottom: "5%"/*, backgroundColor: "green"*/ }} >
           <View style={{ flex: 0.2, justifyContent: "flex-end", width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
