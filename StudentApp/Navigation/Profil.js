@@ -54,21 +54,23 @@ export default class Profil extends Component {
           </View>
         </View>
 
-        <View style={{ flex: 0.4, alignItems: "center", justifyContent: "center", backgroundColor: "#933A3A", borderRadius: 15, margin: 10 }} >
-          <View style={{ flex: 0.2, width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "white", paddingBottom: "2%" }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Obavijest</Text>
-          </View>
-          <View style={{ flex: 0.8, width: "90%", height: "100%", marginTop: "2%" }}>
-            <Text style={{ color: "white" }}>Imate neplaćenih računa u iznosu od <Text style={{ fontWeight: "bold" }}>900,00 kn:</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, marginLeft: "5%" }}>- stanarina za 3. mjesec u iznosu od <Text style={{ fontWeight: "bold", fontSize: 12 }}>300,00 kn</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, marginLeft: "5%" }}>- stanarina za 4. mjesec u iznosu od <Text style={{ fontWeight: "bold", fontSize: 12 }}>300,00 kn</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, marginLeft: "5%" }}>- stanarina za 5. mjesec u iznosu od <Text style={{ fontWeight: "bold", fontSize: 12 }}>300,00 kn</Text></Text>
-          </View>
+        <View style={{ flex: 0.4, alignItems: "center", justifyContent: "center", backgroundColor: "#933A3A", borderRadius: 15, margin: 10}} >
+          <TouchableOpacity style={{width:"90%", height:"100%"}} onPress={() => Actions.stanarina()}>
+            <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "white", paddingBottom: "2%", paddingTop:"2%" }}>
+              <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Obavijest</Text>
+            </View>
+            <View style={{ flex: 0.8, width: "100%", height: "100%", marginTop: "2%" }}>
+              <Text style={{ color: "white", fontSize: 13 }}>Imate neplaćenih računa u iznosu od <Text style={{ fontWeight: "bold" }}>900,00 kn:</Text></Text>
+              <Text style={{ color: "white", fontSize: 12, marginLeft: "5%" }}>- stanarina za 3. mjesec u iznosu od <Text style={{ fontWeight: "bold", fontSize: 12 }}>300,00 kn</Text></Text>
+              <Text style={{ color: "white", fontSize: 12, marginLeft: "5%" }}>- stanarina za 4. mjesec u iznosu od <Text style={{ fontWeight: "bold", fontSize: 12 }}>300,00 kn</Text></Text>
+              <Text style={{ color: "white", fontSize: 12, marginLeft: "5%" }}>- stanarina za 5. mjesec u iznosu od <Text style={{ fontWeight: "bold", fontSize: 12 }}>300,00 kn</Text></Text>
+            </View>
+          </TouchableOpacity>
         </View>
 
 
         <View style={{ flex: 0.4, alignItems: "center", justifyContent: "center"/*, backgroundColor: "green"*/ }} >
-          <TouchableOpacity style={{ width: "90%", height: "100%" }} onPress={() => Actions.profilDetalji()} >
+          <TouchableOpacity style={{width: "90%", height: "100%" }} onPress={() => Actions.profilDetalji()} >
             <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
               <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Opće informacije</Text>
             </View>
@@ -81,9 +83,9 @@ export default class Profil extends Component {
         </View>
 
         <View style={{ flex: 0.3, alignItems: "center", justifyContent: "center", /*backgroundColor: "white"*/ }} >
-          <TouchableOpacity style={{ width: "90%", height: "100%" }} onPress={() => Actions.dom()}>
-            <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
-              <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Studentski dom Dr. Ante Starčević</Text>
+          <TouchableOpacity style={{width: "90%", height: "100%" }} onPress={() => Actions.dom()}>
+            <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "4%" }}>
+              <Text style={{ color: "white", fontSize: 18, fontWeight: "bold"}}>Studentski dom Dr. Ante Starčević</Text>
             </View>
             <View style={{ flex: 0.8, width: "90%", height: "100%", marginTop: "2%" }}>
               <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Paviljon/soba: <Text style={{ fontWeight: "bold" }}>5/313</Text></Text>
@@ -96,7 +98,7 @@ export default class Profil extends Component {
           <TouchableOpacity style={{ width: "90%", height: "100%" }} 
            onPress={() => Actions.upisi()}>
             
-            <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
+            <View style={{ flex: 0.2, width: "100%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "4%" }}>
               <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>ISSP (Studentska prava)</Text>
             </View>
             <View style={{ flex: 0.8, width: "90%", height: "100%", marginTop: "2%" }}>
