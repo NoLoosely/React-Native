@@ -48,7 +48,7 @@ export default class Dom extends Component {
                 </View>
                 <View style={{flex:0.5, width:"20%", height:"100%", alignItems: "flex-end"}}>
                     <View style={{height:"100%", width:"70%", alignSelf:"flex-end", justifyContent:"center"}}>
-                        <Image style={{height:"90%", width:"90%", marginTop:"7%"}} source={require("../Images/ProfilPage/Dom/Telefon.png")}/>
+                        <Image style={{height:"80%", width:"80%", marginTop:"7%"}} source={require("../Images/ProfilPage/Dom/Telefon.png")}/>
                     </View>
                 </View>
             </View>
@@ -59,7 +59,7 @@ export default class Dom extends Component {
                 </View>
                 <View style={{flex:0.5, width:"20%", height:"100%", alignItems: "flex-end"}}>
                     <View style={{height:"100%", width:"70%", alignSelf:"flex-end", justifyContent:"center"}}>
-                        <Image style={{height:"90%", width:"90%", marginTop:"7%"}} source={require("../Images/ProfilPage/Dom/Mail.png")}/>
+                        <Image style={{height:"80%", width:"80%", marginTop:"7%"}} source={require("../Images/ProfilPage/Dom/Mail.png")}/>
                     </View>
                 </View>
             </View>
@@ -67,28 +67,29 @@ export default class Dom extends Component {
         </View>
 
 
-        
+
 
         <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", paddingBottom: "5%"/*, backgroundColor: "green"*/ }} >
-          <View style={{ flex: 0.2, justifyContent: "flex-end", width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Prebivalište</Text>
-          </View>
-          <View style={{ flex: 0.8, width: "90%", height: "100%", marginTop: "2%" }}>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Naselje: <Text style={{ fontWeight: "bold" }}>44 400, Gornja Bučica</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Ulica, broj: <Text style={{ fontWeight: "bold" }}>Gornja Bučica, 17</Text></Text>
+          <View style={{ width: "90%", height: "100%", marginTop: "2%",  borderBottomWidth: 1, borderBottomColor: "#A3A3A3" }}>
+            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Upravitelj: <Text style={{ fontWeight: "bold" }}>Pejo Pavlović, tel. 01 4590 842</Text></Text>
+            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Adresa: <Text style={{ fontWeight: "bold" }}>Zagrebačka avenija 2, 10 000, Zagreb</Text></Text>
           </View>
         </View>
 
 
         <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", /*backgroundColor: "red"*/ }} >
-          <View style={{ flex: 0.2, width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
-            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>ISSP (Studentska prava)</Text>
-          </View>
-          <View style={{ flex: 0.8, width: "90%", height: "100%", marginTop: "2%" }}>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Visoko učilište: <Text style={{ fontWeight: "bold" }}>Filozofksi fakultet, Zagreb</Text></Text>
-            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>Prava do: <Text style={{ fontWeight: "bold" }}>15.10.2018.</Text></Text>
+          <View style={{ width: "90%", height: "100%"}}>
+            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>
+              Studentsko naselje "Dr. Ante Starčević" čine 3 paviljona, sveukupno 1237 kreveta
+              u dvokrevetnim i jednokrevetnim sobama s kupaonama.
+            </Text>
+            <Text style={{ color: "white", fontSize: 12, paddingBottom: "2%" }}>
+              U svakoj sobi je dostupan pristup internetu i hladnjaku, na svakom katu je učionica,
+              praonica rublja i čajna kuhinja.
+            </Text>
           </View>
         </View>
+
 
       </ScrollView>
       </View>

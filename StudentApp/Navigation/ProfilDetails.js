@@ -31,7 +31,7 @@ export default class ProfilDetails extends Component {
       </View>
 
       <ScrollView style={{flex: 0.9, width:"100%"}}>
-        <View style={{ flex: 0.4, alignItems: "center", justifyContent: "center", paddingBottom: "5%", paddingTop:"10%" /*, backgroundColor: "green"*/ }} >
+        <View style={{ flex: 0.4, alignItems: "center", justifyContent: "center", paddingBottom: "2%", paddingTop:"10%" /*, backgroundColor: "green"*/ }} >
           <View style={{ flex: 0.2, justifyContent:"flex-end", width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
             <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Opće informacije</Text>
           </View>
@@ -47,7 +47,7 @@ export default class ProfilDetails extends Component {
           </View>
         </View>
 
-        <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", paddingBottom: "5%"/*, backgroundColor: "green"*/ }} >
+        <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", paddingBottom: "3%"/*, backgroundColor: "green"*/ }} >
           <View style={{ flex: 0.2, justifyContent: "flex-end", width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
             <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Boravište</Text>
           </View>
@@ -57,7 +57,7 @@ export default class ProfilDetails extends Component {
           </View>
         </View>
 
-        <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", paddingBottom: "5%"/*, backgroundColor: "green"*/ }} >
+        <View style={{ flex: 0.2, alignItems: "center", justifyContent: "center", paddingBottom: "3%"/*, backgroundColor: "green"*/ }} >
           <View style={{ flex: 0.2, justifyContent: "flex-end", width: "90%", height: "100%", borderBottomWidth: 1, borderBottomColor: "#A3A3A3", paddingBottom: "2%" }}>
             <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Prebivalište</Text>
           </View>
